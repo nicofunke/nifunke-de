@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# My Homepage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Local Docker Deployment
 
-## Available Scripts
+I mean: Why not? 💁
+Create `sample` image.
 
-In the project directory, you can run:
+```
+docker build -t sample:dev .
+```
 
-### `npm start`
+Run `sample` locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+docker run -itd --rm -v ${PWD}:/src -v /node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true sample:dev
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Deploy Docker Image
 
-### `npm test`
+Deploy `sample` prod image
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+docker build -f Dockerfile.prod -t sample:prod .
+```
 
-### `npm run build`
+Run `sample` prod image locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+docker run -it --rm -p 1337:80 sample:prod
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Build image and push to docker hub
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+docker build -t nifunke/homepage:v1 .
+docker tag nifunke/homepage:v1 nifunke/homepage:v1-release
+docker push nifunke/homepage:v1-release
+```
 
-### `npm run eject`
+Create builder for ARM
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+docker buildx create --name mybuilder
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Build image for ARM(e.g. Raspberry Pi)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+docker buildx use mybuilder
+docker buildx build --platform linux/amd64 -t nifunke/homepage:v1 --load .
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Build image for ARM(e.g. Raspberry Pi) and push to docker hub
 
-## Learn More
+```
+docker buildx use mybuilder
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t nifunke/homepage:v1 --push .
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Inspect image to see which platforms it supports
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+docker buildx imagetools inspect nifunke/homepage:v1
+```
+
+Example `docker-compose.yml` file
+
+```yml
+version: "2"
+services:
+  app:
+    container_name: homepage_app
+    image: nifunke/homepage:v1
+    restart: always
+    networks:
+      - proxy
+```
+
+## TODO
+
+- Font family aussuchen
+- Responsive starter page
+- Type effect?
+- First letter.
+- Faviconf + title
+
+## Ideeen
+
+- Animation Timeline
+- View Transition
+- Initial letter

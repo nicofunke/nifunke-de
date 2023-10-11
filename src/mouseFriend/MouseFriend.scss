@@ -1,0 +1,23 @@
+#mouse-friend {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  background: linear-gradient(
+    to right,
+    var(--color-1),
+    var(--color-2),
+    var(--color-4)
+  );
+  filter: blur(14px);
+}
+
+#app-header:hover > #mouse-friend {
+  opacity: 1;
+}

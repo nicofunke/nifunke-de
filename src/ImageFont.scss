@@ -1,0 +1,48 @@
+.text-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container h1 {
+  margin: 0 1rem;
+
+  font-family: "Raleway";
+  font-size: min(max(12vw, 56px), 120px);
+  text-transform: uppercase;
+  font-weight: 900;
+  -webkit-text-stroke: 1px var(--color-4); /* width and color */
+
+  color: rgba(225, 225, 225, 0.01);
+  background-image: url("main.png"); // SPACE
+  // background-image: url("https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); // SPACE
+  //   background-image: url("https://images.pexels.com/photos/2317711/pexels-photo-2317711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); // ABSTRACT2
+  //   background-image: url("https://images.pexels.com/photos/2693212/pexels-photo-2693212.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); // ABSTRACT
+  //   background-image: url("https://images.pexels.com/photos/4737484/pexels-photo-4737484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); // SKY
+  //   background-image: url("https://images.pexels.com/photos/2117937/pexels-photo-2117937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); // MARBLE
+  //   background-image: url("https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); //  WAVES
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  animation: animate 50s linear infinite;
+  text-align: center;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-position: left top;
+  }
+  // 25% {
+  //   background-position: right bottom;
+  // }
+  50% {
+    background-position: right bottom;
+  }
+  // 75% {
+  //   background-position: right top;
+  // }
+}
