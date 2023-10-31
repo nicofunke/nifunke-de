@@ -78,11 +78,14 @@ services:
 
 ## TODO
 
-- Font family aussuchen
-- Responsive starter page
-- Type effect?
-- First letter.
+- Timeline badges
+- General Layout Container
+- Responsive
+- Impressum
 - Faviconf + title
+- Portfolio
+- Choose Font family
+- Mousefriend with varying styles
 
 ## Ideeen
 

@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import image from "../assets/profile.png";
 import { useEffect, useRef } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 const getBetween = (value: number, min: number, max: number) => {
   if (value < min) return min;
