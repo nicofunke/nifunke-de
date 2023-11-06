@@ -20,27 +20,27 @@ body {
   height: 100%;
 }
 
-.font-display-1 {
-  font-family: "Raleway";
-  font-size: min(max(12vw, 56px), 120px);
-}
+// .font-display-1 {
+//   font-family: "Raleway";
+//   font-size: 8rem;
+//   // font-size: min(max(12vw, 56px), 120px);
+// }
 
 .font-display-2 {
   font-weight: 700;
   font-family: "Raleway";
-  font-size: min(max(6vw, 24px), 56px);
+  font-size: min(max(6vw, 32px), 56px);
+  // font-size: 3.5rem;
 }
 
 // #############################
 
-.something {
-  // background-image: url("main.png");
-  // animation: animate 50s linear infinite;
-  // background-repeat: repeat;
+h2 {
   font-family: "Raleway";
-  font-size: min(max(10vw, 36px), 80px);
+  font-size: min(max(12vw, 64px), 80px);
   text-transform: uppercase;
   font-weight: 900;
-  color: var(--color-3);
-  -webkit-text-stroke: 0.125rem var(--color-4); /* width and color */
+  color: var(--color-1);
+  -webkit-text-stroke: 2px var(--color-3);
+  margin: 0;
 }
