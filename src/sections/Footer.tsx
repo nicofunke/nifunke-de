@@ -6,7 +6,6 @@ const Footer = () => {
     <Box
       height={100}
       p={8}
-      mb={5}
       mt={10}
       sx={{
         background:
