@@ -21,6 +21,4 @@ export const Section = ({ children, fullWidth, ...stackProps }: Props) => {
 
 export const BgContainer = styled(Stack)(() => ({
   alignItems: "center",
-  color: "var(--color-3)", // TODO: Move to MUI theme
-  background: "linear-gradient(#a1969a, var(--color-4))",
 }));

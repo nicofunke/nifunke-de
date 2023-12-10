@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <Box
-      height={200}
+      height={100}
       p={8}
       mb={5}
-      mt={5}
-      sx={{ backgroundColor: "var(--color-3)" }}
+      mt={10}
+      sx={{
+        background:
+          "linear-gradient(to bottom, rgba(0,0,0,0), var(--color-5));",
+      }}
     >
       <Stack
         direction="row"

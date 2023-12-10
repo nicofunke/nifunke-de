@@ -1,4 +1,4 @@
-import { Stack, Box } from "@mui/material";
+import { Stack, Box, Typography } from "@mui/material";
 import { MarkedText } from "../markedText/MarkedText";
 import profile from "../assets/profile.png";
 import { Fade } from "react-awesome-reveal";
@@ -18,13 +18,34 @@ const MainRow = ({ children }: PropsWithChildren) => (
 const Introduction = () => {
   return (
     <Section>
-      <Box alignSelf="start">
-        <h2>About me</h2>
+      <Box>
+        <Box alignSelf="start">
+          <h2>
+            <span
+              style={{
+                WebkitTextStroke: "2px var(--color-4)",
+                color: "var(--color-3)",
+                display: "inline-block",
+              }}
+            >
+              About{" "}
+            </span>
+            <span
+              style={{
+                display: "inline-block",
+                marginLeft: "1rem",
+              }}
+            >
+              {" "}
+              Me
+            </span>
+          </h2>
+        </Box>
+        <MainRow>
+          <Description />
+          <ProfilePicture />
+        </MainRow>
       </Box>
-      <MainRow>
-        <Description />
-        <ProfilePicture />
-      </MainRow>
     </Section>
   );
 };
@@ -46,8 +67,8 @@ const ProfilePicture = () => {
     <Fade direction="down" triggerOnce delay={300}>
       <Box
         bgcolor="var(--color-3)"
-        border="4px solid var(--color-4)"
-        borderRadius={4}
+        border="2px solid var(--color-4)"
+        borderRadius={1}
         width={300}
         height={400}
         color="white"

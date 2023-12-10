@@ -18,6 +18,7 @@
   filter: blur(14px);
 }
 
-#header:hover > #mouse-friend {
+#home-page:hover > #mouse-friend {
+  z-index: 0;
   opacity: 1;
 }

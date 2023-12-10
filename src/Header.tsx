@@ -1,14 +1,12 @@
 import { Fade, Grow, useMediaQuery, useTheme } from "@mui/material";
 import { Parallax } from "react-scroll-parallax";
-import { MouseFriend } from "./mouseFriend/Mousefriend";
 
 const Header = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const numberOfFireFlies = isSmallScreen ? 10 : 20;
   return (
-    <header style={{ zIndex: 34 }} id="header">
-      {!isSmallScreen && <MouseFriend />}
+    <header style={{ zIndex: 34 }}>
       <section style={{ minHeight: "100vh" }}>
         <div className="text-container">
           <Fade in timeout={1000}>
@@ -23,10 +21,6 @@ const Header = () => {
             <div className="firefly" key={index} />
           ))}
         </div>
-        <div className="air air1"></div>
-        <div className="air air2"></div>
-        <div className="air air3"></div>
-        <div className="air air4"></div>
       </section>
     </header>
   );
