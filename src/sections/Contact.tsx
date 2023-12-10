@@ -14,21 +14,21 @@ const ContactBox = () => {
           href={"https://www.linkedin.com/in/nicofunke/"}
           target="_blank"
         >
-          <LinkedInIcon sx={{ fontSize: 80 }} />
+          <LinkedInIcon sx={{ fontSize: 56 }} />
         </IconButton>
         <IconButton
           color="inherit"
           href={"https://github.com/nicofunke"}
           target="_blank"
         >
-          <GitHubIcon sx={{ fontSize: 80 }} />
+          <GitHubIcon sx={{ fontSize: 56 }} />
         </IconButton>
         <IconButton
           color="inherit"
           href={"mailto:contact@nifunke.de"}
           target="_blank"
         >
-          <EmailIcon sx={{ fontSize: 80 }} />
+          <EmailIcon sx={{ fontSize: 56 }} />
         </IconButton>
       </Bounce>
     </Stack>

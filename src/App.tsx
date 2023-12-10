@@ -20,7 +20,7 @@ function App() {
 const Root = () => {
   return (
     <ParallaxProvider>
-      <div id="app">
+      <div>
         <Outlet />
       </div>
       <Footer />

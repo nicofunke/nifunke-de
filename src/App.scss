@@ -20,20 +20,20 @@ body {
   height: 100%;
 }
 
-// .font-display-1 {
-//   font-family: "Raleway";
-//   font-size: 8rem;
-//   // font-size: min(max(12vw, 56px), 120px);
-// }
+a {
+  color: var(--color-4);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-1);
+  }
+}
 
 .font-display-2 {
   font-weight: 700;
   font-family: "Raleway";
   font-size: min(max(6vw, 32px), 56px);
-  // font-size: 3.5rem;
 }
-
-// #############################
 
 h2 {
   font-family: "Raleway";
@@ -44,3 +44,6 @@ h2 {
   -webkit-text-stroke: 2px var(--color-3);
   margin: 0;
 }
+
+// Gradient to hide image in white fog
+// linear-gradient(to bottom,var(--vy-white),rgba(245,245,245,.57) 50%,var(--vy-white)),url(https://assets-global.website-files.com/5f97e53f0dfe4317882c4b91/630124a4510a182394b78a68_map.jpg)

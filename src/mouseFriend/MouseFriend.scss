@@ -9,13 +9,15 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 500ms ease;
-  background: linear-gradient(to right,
-      var(--color-1),
-      var(--color-2),
-      var(--color-4));
+  background: linear-gradient(
+    to right,
+    var(--color-1),
+    var(--color-2),
+    var(--color-4)
+  );
   filter: blur(14px);
 }
 
-#app:hover>#mouse-friend {
+#header:hover > #mouse-friend {
   opacity: 1;
 }
