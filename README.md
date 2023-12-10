@@ -78,12 +78,9 @@ services:
 
 ## TODO
 
-- Hide mousefriend responsive
 - Scroll to top on route changes
-- Styling for footer links
-- Faviconf + title
 - Mousefriend with varying styles
-- CSS modules
+- CSS modules/ CSS cleanup
 - colors etc to MUI theme
 - Choose Font family
 - Portfolio
