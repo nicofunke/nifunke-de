@@ -4,37 +4,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Divider, IconButton, Stack, Typography } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
 import { Section } from "../Layout";
-import WavingHandIcon from "@mui/icons-material/WavingHand";
-
-const ContactBox = () => {
-  return (
-    <Stack direction="row" justifyContent="center" spacing={4} my={8}>
-      <Bounce triggerOnce cascade damping={0.3}>
-        <IconButton
-          color="inherit"
-          href={"https://www.linkedin.com/in/nicofunke/"}
-          target="_blank"
-        >
-          <LinkedInIcon sx={{ fontSize: 56 }} />
-        </IconButton>
-        <IconButton
-          color="inherit"
-          href={"https://github.com/nicofunke"}
-          target="_blank"
-        >
-          <GitHubIcon sx={{ fontSize: 56 }} />
-        </IconButton>
-        <IconButton
-          color="inherit"
-          href={"mailto:contact@nifunke.de"}
-          target="_blank"
-        >
-          <EmailIcon sx={{ fontSize: 56 }} />
-        </IconButton>
-      </Bounce>
-    </Stack>
-  );
-};
 
 const ContactSection = () => {
   return (

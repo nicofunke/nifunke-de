@@ -1,9 +1,9 @@
-import { Stack, Box, Typography } from "@mui/material";
-import { MarkedText } from "../markedText/MarkedText";
-import profile from "../assets/profile.png";
-import { Fade } from "react-awesome-reveal";
+import { Box, Stack } from "@mui/material";
 import { PropsWithChildren } from "react";
+import { Fade } from "react-awesome-reveal";
 import { Section } from "../Layout";
+import profile from "../assets/profile.png";
+import { MarkedText } from "../markedText/MarkedText";
 
 const MainRow = ({ children }: PropsWithChildren) => (
   <Stack
