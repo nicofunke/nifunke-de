@@ -79,12 +79,9 @@ services:
 ## TODO
 
 - Scroll to top on route changes
-- Mousefriend with varying styles
-- CSS modules/ CSS cleanup
-- colors etc to MUI theme
-- Choose Font family
+- Mousefriend with varying styles on hover
+- Better hover effect for contact icons
 - Portfolio
-- Timeline badges
 
 Background with gradient overlay
 linear-gradient(to bottom,var(--vy-white),rgba(245,245,245,.57) 50%,var(--vy-white)),url(https://assets-global.website-files.com/5f97e53f0dfe4317882c4b91/630124a4510a182394b78a68_map.jpg)
