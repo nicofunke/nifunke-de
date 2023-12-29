@@ -4,6 +4,7 @@ body {
   --background: #0b0d1a;
   --background-light: #171926;
   --salmon: #e3d3d4;
+  --highlight: rgba(200, 157, 184, 0.6);
 
   margin: 0;
   padding: 0;
@@ -16,6 +17,17 @@ body {
 html,
 body {
   height: 100%;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: var(--highlight);
+}
+
+::selection {
+  color: white;
+  background: var(--highlight);
 }
 
 a {
