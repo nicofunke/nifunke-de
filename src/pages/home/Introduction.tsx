@@ -53,6 +53,7 @@ const Content = () => {
     >
       <Description />
       <ProfilePicture />
+      <div className="box glowing"></div>
     </Stack>
   );
 };
@@ -76,19 +77,35 @@ const ProfilePicture = () => {
   return (
     <Fade direction="down" triggerOnce delay={300}>
       <Box
-        borderRadius={1}
-        width={{ lg: 300, xs: 225 }}
-        height={{ lg: 400, xs: 300 }}
         sx={({ palette }) => ({
+          padding: "4px",
+          background: `linear-gradient(45deg,  rgba(0, 0, 0, 0) 40%, ${palette.salmon.main} 45%, ${palette.salmon.main} 50%, ${palette.secondary.main} 55% ,rgba(0, 0, 0, 0) 60%)`,
           borderRadius: 1,
-          border: `2px solid ${palette.salmon.main}`,
-          filter: "grayscale(0.5)",
-          background: `url(${profile})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          boxShadow: "4px 4px 8px black",
+          backgroundSize: "200%",
+          animation: " glower 8s linear infinite",
+          " @keyframes glower": {
+            "0%": {
+              backgroundPosition: "-100% -100%",
+            },
+            "100%": {
+              backgroundPosition: "100% 100%",
+            },
+          },
         })}
-      />
+      >
+        <Box
+          width={{ lg: 300, xs: 225 }}
+          height={{ lg: 400, xs: 300 }}
+          sx={({ palette }) => ({
+            borderRadius: 1,
+            border: `1px solid ${palette.salmon.main}`,
+            filter: "grayscale(0.5)",
+            background: `url(${profile})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          })}
+        />
+      </Box>
     </Fade>
   );
 };
